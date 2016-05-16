@@ -6,24 +6,26 @@ import es.ubu.lsi.common.ChatMessage;
 
 public class ChatClientImpl implements ChatClient {
 
+	private int id;
+
+	private String nickname;
+
 	public int getId() throws RemoteException {
-		// TODO Auto-generated method stub
-		return 0;
+		return this.id;
 	}
 
 	public void setId(int id) throws RemoteException {
-		// TODO Auto-generated method stub
+		this.id = id;
 
 	}
 
 	public void receive(ChatMessage msg) throws RemoteException {
-		// TODO Auto-generated method stub
+		System.out.println(this.nickname + ": " + msg.getMessage());
 
 	}
 
 	public String getNickName() throws RemoteException {
-		// TODO Auto-generated method stub
-		return null;
+		return this.nickname;
 	}
 
 }
