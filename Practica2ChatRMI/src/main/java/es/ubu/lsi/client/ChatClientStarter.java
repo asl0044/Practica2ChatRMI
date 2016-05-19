@@ -21,8 +21,8 @@ public class ChatClientStarter {
 			boolean continua = true;
 			while (continua) {
 				userInput = inputConsola.nextLine();
-				ChatMessage message = null;
-				if (userInput.compareToIgnoreCase("logout") == 0) {
+				ChatMessage message = new ChatMessage(client.getId(),userInput);
+				if (message.getMessage().compareToIgnoreCase("logout") == 0) {
 					server.logout(client);
 					continua = false;
 				} else if (message.getMessage().startsWith("#encrypted")) {
