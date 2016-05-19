@@ -9,6 +9,10 @@ public class ChatClientImpl implements ChatClient {
 	private int id;
 
 	private String nickname;
+	
+	public ChatClientImpl(String nickname){
+		this.nickname = nickname;
+	}
 
 	public int getId() throws RemoteException {
 		return this.id;
